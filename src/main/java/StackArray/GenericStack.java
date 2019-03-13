@@ -12,4 +12,15 @@ public class GenericStack<E> {
 
     public GenericStack() {
     }
+
+    public E isEmpty() {
+        return null;
+    }
+
+    public void push(E foobar) {
+    }
+
+    public E pop() {
+        return null;
+    }
 }
