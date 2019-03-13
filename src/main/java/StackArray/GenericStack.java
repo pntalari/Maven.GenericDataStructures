@@ -8,19 +8,37 @@ import java.util.Arrays;
  * @param <E>
  */
 public class GenericStack<E> {
+    static final int DEFAULT_CAPACITY = 1000;
+    int size;
     private E[] elements;
+    int capacity;
 
     public GenericStack() {
+        this.capacity = DEFAULT_CAPACITY;
+        elements = (E[]) new Object[DEFAULT_CAPACITY];
     }
 
     public E isEmpty() {
-        return null;
+        Boolean result = (size == 0);
+        return (E)result;
     }
 
     public void push(E foobar) {
+        if(this.size >= elements.length){
+            int newSize = size + (size + 1);
+            elements = Arrays.copyOf(elements,newSize);
+        }
+        elements[size++] = foobar;
     }
 
     public E pop() {
-        return null;
+        if(size<=0){
+            throw new IndexOutOfBoundsException();
+        }
+        E value = elements[--size];
+        elements[size] = null;
+
+        return value;
     }
+
 }

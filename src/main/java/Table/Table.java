@@ -1,6 +1,10 @@
 package Table;
 
+import org.omg.IOP.ENCODING_CDR_ENCAPS;
+
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * This class needs to manage an ArrayList of Entry objects.  It needs a get method that takes a key and returns
@@ -10,8 +14,30 @@ import java.util.ArrayList;
  * Void return on `remove`.
  */
 public class Table<K, V> {
-    private ArrayList entries;
+    private ArrayList<Entry> entries;
+   // Entry<K,V> entry = new Entry<K,V>();
 
     public Table() {
+       entries = new ArrayList<Entry>();
+
+    }
+
+    public Entry get(K foo) {
+        Entry result = null;
+        if(entries.contains(foo)){
+
+        }
+        else {
+            result = null;
+        }
+        return result;
+    }
+
+    public void put(K foo, V i) {
+   //     entries.add(i,foo);
+    }
+
+    public void remove(K foo) {
+
     }
 }
