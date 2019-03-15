@@ -12,6 +12,4 @@ public class MapFunc {
     public static ArrayList map(ArrayList arrayList, Function<Integer,Object> function){
         return (ArrayList) arrayList.stream().map(function).collect(Collectors.toCollection(ArrayList::new));
     }
-
-
 }

@@ -15,7 +15,6 @@ import java.util.Map;
  */
 public class Table<K, V> {
     private ArrayList<Entry> entries;
-    // Entry<K,V> entry = new Entry<K,V>();
 
     public Table() {
         entries = new ArrayList<>();
