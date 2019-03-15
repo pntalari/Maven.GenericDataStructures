@@ -7,9 +7,9 @@ import java.util.EmptyStackException;
  * Implement Stack<E> by adding the push, pop, and isEmpty functions.  It must pass the prewritten unit tests.
  * If you pop on an empty stack, throw an IndexOutOfBoundsException.
  */
-public class Stack<E> {
+public class Stack<E>  {
 
-    private ArrayList elements;
+    private ArrayList<E> elements;
 
     public Stack(){
         elements = new ArrayList<E>();
@@ -28,10 +28,15 @@ public class Stack<E> {
     public E pop() {
 
         if(!elements.isEmpty()){
-            return (E) elements.remove(elements.size()-1);
+            return elements.remove(elements.size()-1);
         }
         else
             throw new IndexOutOfBoundsException();
     }
+
+//    public E peek(){
+//
+//     return E;
+//    }
 
 }

@@ -14,7 +14,7 @@
 //        intList.add(1);
 //        intList.add(2);
 //        // When it's mapped with a function to double the value
-//        ArrayList<Integer> mappedList = MapFunc.map(intList, num -> num*2);
+//        ArrayList<Integer> mappedList = MapFunc.map(intList, num -> num * 2);
 //        // Then all the values are doubled
 //        Assert.assertEquals(new Integer(2), mappedList.get(0));
 //        Assert.assertEquals(new Integer(4), mappedList.get(1));
@@ -27,10 +27,12 @@
 //        intList.add(1);
 //        intList.add(2);
 //        // When it's mapped with to string
-//        ArrayList<String> mappedList = MapFunc.map(intList, num -> num.toString());
+////        ArrayList<String> mappedList = MapFunc.map(intList, num -> {
+////            return num.toString();
+////        });
 //        // Then all the values are doubled
-//        Assert.assertEquals("1", mappedList.get(0));
-//        Assert.assertEquals("2", mappedList.get(1));
+////        Assert.assertEquals("1", mappedList.get(0));
+////        Assert.assertEquals("2", mappedList.get(1));
 //    }
 //
 //}

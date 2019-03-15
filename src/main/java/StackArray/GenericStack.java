@@ -1,5 +1,6 @@
 package StackArray;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 
 /**
@@ -8,7 +9,7 @@ import java.util.Arrays;
  * @param <E>
  */
 public class GenericStack<E> {
-    static final int DEFAULT_CAPACITY = 1000;
+    static final int DEFAULT_CAPACITY = 10;
     int size;
     private E[] elements;
     int capacity;
@@ -24,6 +25,10 @@ public class GenericStack<E> {
     }
 
     public void push(E foobar) {
+//        E[]  newElements = Arrays.copyOf(elements,elements.length+1);
+//        newElements[newElements.length-1] = foobar;
+//        this.elements = newElements;
+
         if(this.size >= elements.length){
             int newSize = size + (size + 1);
             elements = Arrays.copyOf(elements,newSize);

@@ -15,29 +15,34 @@ import java.util.Map;
  */
 public class Table<K, V> {
     private ArrayList<Entry> entries;
-   // Entry<K,V> entry = new Entry<K,V>();
+    // Entry<K,V> entry = new Entry<K,V>();
 
     public Table() {
-       entries = new ArrayList<Entry>();
-
+        entries = new ArrayList<>();
     }
 
-    public Entry get(K foo) {
-        Entry result = null;
-        if(entries.contains(foo)){
-
+    public V get(K foo) {
+        for (Entry entry : entries) {
+            if (entry.getKey().equals(foo)) {
+                return (V) entry.getValue();
+            }
         }
-        else {
-            result = null;
-        }
-        return result;
+        return null;
     }
 
     public void put(K foo, V i) {
-   //     entries.add(i,foo);
+        remove(foo);
+        entries.add(new Entry(foo, i));
     }
 
     public void remove(K foo) {
-
+        for (Entry entry:entries){
+            if(entry.getKey().equals(foo)){
+                entries.remove(entry);
+                break;
+            }
+        }
     }
+
 }
+

@@ -1,5 +1,7 @@
 package TableNested;
 
+import Table.Entry;
+
 import java.util.ArrayList;
 
 /**
@@ -7,5 +9,15 @@ import java.util.ArrayList;
  * Think about how nested classes should work with generics.
  */
 public class TableNested<K, V> {
+    private ArrayList<Entry> entries;
+
+    private class Entry{
+        private K key;
+        private V value;
+
+        public Entry(){
+
+        }
+    }
 
 }
